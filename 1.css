@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.toggle-btn {
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    float: right;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: none; /* Initially hide the nav items */
+}
+
+.nav-list li {
+    float: left;
+}
+
+.nav-list a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+    .toggle-btn {
+        display: block; /* Show the toggle button on small screens */
+    }
+
+    .nav-list {
+        display: none; /* Hide the nav items by default on small screens */
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-list.show {
+        display: block; /* Show the nav items when the class is added */
+    }
+
+    .nav-list li {
+        display: block;
+        float: none;
+    }
+}
